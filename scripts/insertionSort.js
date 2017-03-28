@@ -1,13 +1,22 @@
+let sortedArray = []
 let insertionSort = (array) => {
-  let sortedArray = []
+  if (!array.length) {
+    return sortedArray;
+  }
+  let firstElement = array.shift()
 
-
-
-
-
-
-
-
+  if (sortedArray.length) {
+    for (let i = 0; i < sortedArray.length; i++) {
+      if (firstElement < sortedArray[i]) {
+        sortedArray.splice(i, 0, firstElement)
+        console.log(sortedArray)
+        insertionSort(array)
+        return;
+      }
+    }
+  }
+  sortedArray.push(firstElement)
+  insertionSort(array)
   return sortedArray
 }
 
