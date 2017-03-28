@@ -15,6 +15,6 @@ describe('Bubble Sort Tests', () => {
   // })
 
   it('should organize the elements by value', () => {
-    assert.deepEqual(bubbleSort([2, 1, 4]), [1, 2, 4])
+    assert.deepEqual(bubbleSort([2, 1, 4, 7, 0, 3]), [0, 1, 2, 3, 4, 7])
   })
 })
