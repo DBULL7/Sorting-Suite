@@ -10,6 +10,10 @@ describe('Bubble Sort Tests', () => {
     assert.deepEqual(bubbleSort([ 1, 2 ]), [ 1, 2 ])
   })
 
+  // it.only('should return a array', () => {
+  //   assert.deepEqual(bubbleSort([ 5, 4, 3, 2, 1 ]), [ 1, 2, 3, 4, 5 ])
+  // })
+
   // it('should check which value is larger', () => {
   //   assert.equal(bubbleSort([2, 1]), 2)
   // })

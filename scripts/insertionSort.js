@@ -1,43 +1,20 @@
-let sortedArray = []
 let insertionSort = (array) => {
-  if (!array.length) {
-    return sortedArray;
-  }
-  let firstElement = array.shift()
 
-  if (sortedArray.length) {
-    for (let i = 0; i < sortedArray.length; i++) {
-      if (firstElement < sortedArray[i]) {
-        sortedArray.splice(i, 0, firstElement)
-        console.log(sortedArray)
-        insertionSort(array)
-        return;
+  for (let i = 1; i < array.length; i++) {
+    let element = array[i]
+
+    for (let j = i - 1; array[j] >= element; j--) {
+      if (element < array[j]) {
+        let temp = array[j]
+
+        array[j] = element
+        array[j + 1] = temp
       }
     }
   }
-  sortedArray.push(firstElement)
-  insertionSort(array)
-  return sortedArray
+  return array
 }
 
 
+
 module.exports = insertionSort
-
-
-
-
-// for (let i = 0; i < sortedArray.length; i++) {
-//   if (array[i] > !sortedArray[i]) {
-//     sortedArray.push(array[i])
-//   } else if (array[i] == !sortedArray[i]) {
-//
-//     sortedArray.splice(i, 0, array[i])
-//   }
-//
-// }
-
-
-
-// } else if (array[j] == !sortedArray[i]) {
-//   sortedArray.splice(i, 0, array[j])
-//   j++
