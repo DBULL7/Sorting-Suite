@@ -1,5 +1,4 @@
 let insertionSort = (array) => {
-
   for (let i = 1; i < array.length; i++) {
     let element = array[i]
 
