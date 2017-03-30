@@ -2,6 +2,8 @@ import { assert } from 'chai';
 import bubbleSort from '../scripts/bubbleSort'
 
 describe('Bubble Sort Tests', () => {
+  let randomArr = Array.from({length: 10000}, () => Math.floor(Math.random() * 10000))
+
   it('should be a a function', () => {
     assert.isFunction(bubbleSort)
   })
@@ -9,14 +11,6 @@ describe('Bubble Sort Tests', () => {
   it('should return a array', () => {
     assert.deepEqual(bubbleSort([ 1, 2 ]), [ 1, 2 ])
   })
-
-  // it.only('should return a array', () => {
-  //   assert.deepEqual(bubbleSort([ 5, 4, 3, 2, 1 ]), [ 1, 2, 3, 4, 5 ])
-  // })
-
-  // it('should check which value is larger', () => {
-  //   assert.equal(bubbleSort([2, 1]), 2)
-  // })
 
   it('should organize the elements by value', () => {
     assert.deepEqual(bubbleSort([2, 1, 4, 7, 0, 3]), [0, 1, 2, 3, 4, 7])
@@ -26,7 +20,7 @@ describe('Bubble Sort Tests', () => {
     assert.deepEqual(bubbleSort(['w', 'd', 'a', 'e', 'b', 'h']), ['a', 'b', 'd', 'e', 'h', 'w'])
   })
 
-  // it('should organize letters and numbers', () => {
-  //   assert.deepEqual(['z', 'a', 'd', 13, 11, 20], ['a', 'd', 'z', 11, 13, 20])
-  // })
+  it('should be miserably slow through 10k random numbers', () => {
+    bubbleSort(randomArr)
+  })
 })
