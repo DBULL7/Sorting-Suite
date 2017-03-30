@@ -9,7 +9,7 @@ describe('Bubble Sort Tests', () => {
   })
 
   it('should return a array', () => {
-    assert.deepEqual(bubbleSort([ 1, 2 ]), [ 1, 2 ])
+    assert.deepEqual(bubbleSort([]), [])
   })
 
   it('should organize the elements by value', () => {

@@ -30,7 +30,15 @@ describe('Merge Add tests', () => {
     assert.isFunction(mergeAdd)
   })
 
+  it('should return an array', () => {
+    assert.deepEqual(mergeAdd([], []), [])
+  })
+
   it('should sort an arrays of 2 elements', () => {
     assert.deepEqual(mergeAdd([5], [3]), [3, 5] )
+  })
+
+  it('should sort an empty array and another array', () => {
+    assert.deepEqual(mergeAdd([], [3]), [3])
   })
 })
