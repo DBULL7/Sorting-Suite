@@ -33,6 +33,4 @@ describe('Merge Add tests', () => {
   it('should sort an arrays of 2 elements', () => {
     assert.deepEqual(mergeAdd([5], [3]), [3, 5] )
   })
-
-
 })

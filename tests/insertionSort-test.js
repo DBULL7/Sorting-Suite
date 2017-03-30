@@ -1,6 +1,5 @@
 import { assert } from 'chai';
 import insertionSort from '../scripts/insertionSort'
-require('locus')
 
 describe('Insertion Sort Tests', () => {
   let randomArr = Array.from({length: 15000}, () => Math.floor(Math.random() * 15000))
