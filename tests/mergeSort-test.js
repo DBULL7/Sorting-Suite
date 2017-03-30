@@ -30,7 +30,7 @@ describe('Merge Add tests', () => {
     assert.isFunction(mergeAdd)
   })
 
-  it('should return an array', () => {
+  it('should return a single array', () => {
     assert.deepEqual(mergeAdd([], []), [])
   })
 
